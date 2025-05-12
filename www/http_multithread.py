@@ -1,9 +1,10 @@
-''' Esercitazione 5 - Corso di Programmazione di Reti - Universita'  di Bologna'''
-
+# -*- coding: utf-8 -*-
 #!/bin/env python
 import sys, signal
 import http.server
 import socketserver
+
+
 
 # Legge il numero della porta dalla riga di comando
 if sys.argv[1:]:
