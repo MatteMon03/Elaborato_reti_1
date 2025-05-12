@@ -3,7 +3,8 @@ import os
 
 HOST = '127.0.0.1'
 PORT = 8080
-BASE_DIR = './Pagine_web'
+BASE_DIR = './www'
+
 
 def get_mime_type(path):
     if path.endswith('.html'):
@@ -17,6 +18,7 @@ def get_mime_type(path):
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
     server_socket.bind((HOST, PORT))
     server_socket.listen(1)
+
     print(f"Server in ascolto su http://{HOST}:{PORT}")
 
     while True:
