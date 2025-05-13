@@ -20,14 +20,14 @@ body {
         height: 100%;
     }
     header {
-      background-color: #0066cc;
+      background-color: #2d2f32;
       color: white;
       padding: 20px;
       text-align: center;
     }
 
     nav {
-      background-color: #004c99;
+      background-color: #1d2022;
       display: flex;
       justify-content: center;
       padding: 10px 0;
