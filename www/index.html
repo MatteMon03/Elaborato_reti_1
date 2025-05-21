@@ -6,32 +6,62 @@
   <title>Home</title>
   <link rel="stylesheet"  href="style.css?v=1.0">
 </head>
+
   <header>
-    <h1>Spiegazione srver.py</h1>
+    <h1>Spiegazione Teoria</h1>
     <p>Matteo Monari matricola:0001078461  email: matteo.monari6@studio.unibo.it</p>
   </header>
+
 <body>
+
   <nav>
     <a href="index.html">Home</a>
-    <a href="pagina1.html">Pagina 1</a>
-    <a href="pagina2.html">Pagina 2</a>
-    <a href="contatti.html">Errore</a>
+    <a href="server.html">Server</a>
+    <a href="errore.html">Gestione Errore</a>
+    <a href="non_presente.html">404</a>
   </nav>
-  <main>
-        <h2>Contenuti principali</h2>
-        <p>La pagina Contatti non esiste quindi porterà ad avere error 404 </p>
 
-        <div>
-            <img src="server.jpg" alt="Il mio file server" >
-        </div>
-        <h3>Server</h3>
+  <main>
+        <h2>HTTP -> Hyper-Text Transfer Protocolo</h2>
+        <p>La pagina 404 non esiste quindi porterà ad avere un errore</p>
+        
+        <img src="HTTP.jpg" alt="Immagine del protocollo HTTP" >
+
         <ul>
-        Questa immagine raffiguare il file server.py che avviato tramite spyder funge da server per le mie pagine
-        <li>Il server è in ascolto sulla porta 8080</li>
-        <li>Per visualizzare le pagine è necessario avviare il server e poi aprire il browser all'indirizzo http://localhost:8080/</li>
-        <li>Il server serve le pagine HTML e le risorse statiche come immagini e file CSS</li>
-        <p>Breve spiegazione del file server.py raffigurato sopra</p>
-        ... to do
+        Come si può vedere dall'immagine sopra il protocollo HTTP è un protocollo di comunicazione client-server che permette
+        di trasferire informazioni tra un client e un server.
+        <li>Il client invia una richiesta al server per ottenere una risorsa (pagina web, immagine, file, ecc.)
+            I possibili Client sono i browser web, le app mobili e altri software che richiedono dati da un server.</li><br>
+
+        <li>Il server elabora la richiesta e invia una risposta al client, che può includere la risorsa richiesta 
+            o un messaggio di errore (ad esempio, 404 Not Found)
+            Il server può essere un computer fisico o virtuale che ospita le risorse e gestisce le richieste dei client</li>
+      </ul>
+        <p>Breve spiegazione del protocollo HTTP raffigurato sopra</p>
+        <ul>
+          HTTP è un protocollo di comunicazione STATELESS, il che significa che ogni richiesta è indipendente dalle altre, 
+          il server risponde ma non memorizza la transizione.
+          I messaggi sono di due tipi RICHIESTA o RISPOSTA e sono formati da una intestazione (HEADER) e un corpo(BODY).
+          <li>L'header è composto da informazioni che riguardano la tipologia del messaggio</li>
+          <li>Il body è composto dalle informazioni effettive del messaggio</li><br>
+
+         
+
+          La richiesta è formata da un metodo, un URL e una versione del protocollo.
+          Le richieste HTTP possono essere di diversi tipi, come GET (per ottenere dati), POST (per inviare dati) e PUT (per aggiornare dati).
+
+          <img src="richiesta.jpg" alt="Immagine richiesta HTTP" >
+
+          Il server elabora la richiesta e invia una risposta al client, che può includere la risorsa richiesta o un messaggio di errore (ad esempio, 404 Not Found oppure 200 OK)
+          
+          <img src="risposta.jpg" alt="Immagine risposta HTTP" >
+
+          Quindi l'user si interfaccia con il browser tramite un URL (Uniform Resource Locator) che è un indirizzo web che identifica una risorsa su Internet.
+          L'URL è composto da diverse parti, tra cui il protocollo (ad esempio, http o https), il nome del dominio (ad esempio, www.example.com) e il percorso della risorsa (ad esempio, /pagina.html).
+          <br>
+          il browser invia una richiesta HTTP al server per ottenere la risorsa specificata nell'URL.
+          Il server elabora la richiesta e invia una risposta HTTP al browser, che a sua volta la restituisce all'user.
+
         </ul>
   </main>
 </body>
