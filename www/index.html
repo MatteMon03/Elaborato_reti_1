@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
-  <link rel="stylesheet"  href="style.css?v=1.0">
+  <link rel="stylesheet" href="style.css?v=1.0">
 </head>
+
+<body>
 
   <header>
     <h1>Spiegazione Teoria</h1>
-    <p>Matteo Monari matricola:0001078461  email: matteo.monari6@studio.unibo.it</p>
+    <p>Matteo Monari – Matricola: 0001078461 – Email: matteo.monari6@studio.unibo.it</p>
   </header>
-
-<body>
 
   <nav>
     <a href="index.html">Home</a>
@@ -22,47 +22,50 @@
   </nav>
 
   <main>
-        <h2>HTTP -> Hyper-Text Transfer Protocolo</h2>
-        <p>La pagina 404 non esiste quindi porterà ad avere un errore</p>
-        
-        <img src="HTTP.jpg" alt="Immagine del protocollo HTTP" >
+    <h2>HTTP – HyperText Transfer Protocol</h2>
+    <p>La pagina <code>404</code> non esiste, quindi porterà ad un errore (pagina non trovata).</p>
+    
+    <img src="img/HTTP.jpg" alt="Immagine del protocollo HTTP">
 
-        <ul>
-        Come si può vedere dall'immagine sopra il protocollo HTTP è un protocollo di comunicazione client-server che permette
-        di trasferire informazioni tra un client e un server.
-        <li>Il client invia una richiesta al server per ottenere una risorsa (pagina web, immagine, file, ecc.)
-            I possibili Client sono i browser web, le app mobili e altri software che richiedono dati da un server.</li><br>
+    <p>Il protocollo HTTP è un protocollo client-server che consente di trasferire risorse via rete.</p>
 
-        <li>Il server elabora la richiesta e invia una risposta al client, che può includere la risorsa richiesta 
-            o un messaggio di errore (ad esempio, 404 Not Found)
-            Il server può essere un computer fisico o virtuale che ospita le risorse e gestisce le richieste dei client</li>
-      </ul>
-        <p>Breve spiegazione del protocollo HTTP raffigurato sopra</p>
-        <ul>
-          HTTP è un protocollo di comunicazione STATELESS, il che significa che ogni richiesta è indipendente dalle altre, 
-          il server risponde ma non memorizza la transizione.
-          I messaggi sono di due tipi RICHIESTA o RISPOSTA e sono formati da una intestazione (HEADER) e un corpo(BODY).
-          <li>L'header è composto da informazioni che riguardano la tipologia del messaggio</li>
-          <li>Il body è composto dalle informazioni effettive del messaggio</li><br>
+    <ul>
+      <li>Il client (browser, app) invia una richiesta al server per ottenere una risorsa (pagina, immagine, file, ecc.).</li>
+      <li>Il server elabora la richiesta e risponde con il contenuto richiesto oppure con un errore (es. 404).</li>
+      <li>La comunicazione avviene tramite connessione TCP e usa il formato richieste/risposte.</li>
+    </ul>
 
-         
+    <p>HTTP è uno standard <strong>stateless</strong>, cioè ogni richiesta è indipendente: il server non mantiene memoria dello stato.</p>
 
-          La richiesta è formata da un metodo, un URL e una versione del protocollo.
-          Le richieste HTTP possono essere di diversi tipi, come GET (per ottenere dati), POST (per inviare dati) e PUT (per aggiornare dati).
+    <ul>
+      <li>I messaggi HTTP sono di due tipi RICHIESTA o RISPOSTA e sono composti da un'intestazione (Header) e da un corpo (Body).</li>
+      <li>L'Header contiene informazioni come metodo, URL, tipo contenuto, ecc.</li>
+      <li>Il body è composto dalle informazioni effettive del messaggio</li>
+    </ul>
 
-          <img src="richiesta.jpg" alt="Immagine richiesta HTTP" >
+    <p>Le richieste HTTP più comuni sono:</p>
+    <ul>
+      <li><code>GET</code> – Ottiene una risorsa.</li>
+      <li><code>POST</code> – Invia dati al server.</li>
+      <li><code>PUT</code> – Aggiorna una risorsa esistente.</li>
+    </ul>
 
-          Il server elabora la richiesta e invia una risposta al client, che può includere la risorsa richiesta o un messaggio di errore (ad esempio, 404 Not Found oppure 200 OK)
-          
-          <img src="risposta.jpg" alt="Immagine risposta HTTP" >
+    <img src="img/richiesta.jpg" alt="Esempio di richiesta HTTP">
 
-          Quindi l'user si interfaccia con il browser tramite un URL (Uniform Resource Locator) che è un indirizzo web che identifica una risorsa su Internet.
-          L'URL è composto da diverse parti, tra cui il protocollo (ad esempio, http o https), il nome del dominio (ad esempio, www.example.com) e il percorso della risorsa (ad esempio, /pagina.html).
-          <br>
-          il browser invia una richiesta HTTP al server per ottenere la risorsa specificata nell'URL.
-          Il server elabora la richiesta e invia una risposta HTTP al browser, che a sua volta la restituisce all'user.
+    <p>Il server risponde con un messaggio HTTP che contiene uno <strong>status code</strong> (es. 200 OK, 404 Not Found) e i dati richiesti.</p>
 
-        </ul>
+    <img src="img/risposta.jpg" alt="Esempio di risposta HTTP">
+
+    <p>Il browser si collega al server tramite un URL (Uniform Resource Locator), che specifica:</p>
+    <ul>
+      <li>Protocollo (http o https)</li>
+      <li>Dominio (es. www.example.com)</li>
+      <li>Percorso della risorsa (es. /index.html)</li>
+    </ul>
+
+    <p>Infine, il browser mostra la risposta all'utente interpretando il contenuto .</p>
+
   </main>
+
 </body>
 </html>

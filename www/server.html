@@ -25,17 +25,46 @@
         <h2>Server.py</h2>
         <p>La pagina 404 non esiste quindi porterà ad avere un errore</p>
         <div>
-            <img src="server.jpg" alt="Il mio file server" >
+            <img src="img/server.jpg" alt="Immagine dello script Server.py" >
         </div>
-        
-        <ul>
-        Questa immagine raffiguare il file server.py che avviato tramite spyder funge da server per le mie pagine
-        <li>Il server è in ascolto sulla porta 8080</li>
-        <li>Per visualizzare le pagine è necessario avviare il server e poi aprire il browser all'indirizzo http://localhost:8080/</li>
-        <li>Il server serve le pagine HTML e le risorse statiche come immagini e file CSS</li>
-        <p>Breve spiegazione del file server.py raffigurato sopra</p>
-        ... to do
-        </ul>
+<h3>Funzionalità di un server HTTP</h3>
+
+<p>
+  Quando il client invia una richiesta al server tramite il metodo <strong>GET</strong>, 
+  il server esegue una connessione <strong>TCP</strong> e tramite le funzioni <strong>accept e fork</strong> genera un nuovo thread (server child)
+  per gestire la comunicazione con quel client. Questo comportamento è ottenuto 
+  tramite <code>ThreadingTCPServer</code>, che consente al server di essere 
+  <strong>multi-threaded</strong>, ovvero in grado di gestire più richieste contemporaneamente 
+  senza bloccare la porta di ascolto (8080).
+</p>
+
+<p>
+  Questo approccio assicura che il server sia sempre disponibile per nuove connessioni, 
+  mentre ogni thread si occupa di una singola comunicazione client-server.
+</p>
+
+<h4>Comportamento del server Python (server.py)</h4>
+<ul>
+  <li>Il server è in ascolto sulla porta <strong>8080</strong> (default).</li>
+  <li>Per visualizzare le pagine HTML, è necessario avviare lo script <code>server.py</code> e poi aprire il browser su <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.</li>
+  <li>Il server serve file HTML, CSS e altre risorse statiche (es. immagini, JS...)</li>
+</ul>
+
+<h4>Funzionamento del file <code>server.py</code></h4>
+<p>
+  Lo script imposta un server HTTP in Python. Se non viene fornita una porta da terminale, si imposta di default sulla <strong>porta 8080</strong>. 
+  Usa <code>http.server.SimpleHTTPRequestHandler</code>, che gestisce automaticamente le richieste HTTP e cerca i file richiesti nel file system locale.
+</p>
+
+<p>
+  Se il file richiesto esiste, viene restituito con <strong>codice 200 OK</strong>; 
+  altrimenti, il server restituisce un <strong>errore 404</strong> con una pagina di errore predefinita (o personalizzata, se presente).
+</p>
+
+<p>
+  Inoltre, è presente una funzione <code>signal_handler()</code> per gestire l’interruzione da tastiera (Ctrl+C), che consente la chiusura pulita del server e dei thread attivi.
+</p>
+
   </main>
 </body>
 </html>
