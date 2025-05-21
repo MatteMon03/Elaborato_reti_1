@@ -3,36 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home</title>
-  <link rel="stylesheet"  href="style.css?v=1.0">
+  <title>Gestione Errore</title>
+  <link rel="stylesheet" href="style.css?v=1.0">
 </head>
 
-  <header>
-    <h1>Spiegazione Errore 404</h1>
-    <p>Matteo Monari matricola:0001078461  email: matteo.monari6@studio.unibo.it</p>
-  </header>
-
 <body>
+
+  <header>
+    <h1>Spiegazione Errori</h1>
+    <p class="io">Matteo Monari – Matricola: 0001078461 – Email: matteo.monari6@studio.unibo.it</p>  </header>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="server.html">Server</a>
     <a href="errore.html">Gestione Errore</a>
-    <a href="non_presente.html">404</a>
+    <a href="non_presente.html">Errori</a>
   </nav>
 
   <main>
-        <h2>Contenuti principali</h2>
-        <p>La pagina 404 non esiste quindi porterà ad avere un errore</p>
-        <div>
-            <img src="server.jpg" alt="Il mio file server" >
-        </div>
-        <h3>Server</h3>
-        <ul>
-        1 errore Server
-        2 errore immagine
-        3 error 404
-        </ul>
+    <section>
+      <h2>Gestione MIME e Errori</h2>
+      <p>Le MIME Type (Multipurpose Internet Mail Extensions) indicano al browser il tipo di contenuto ricevuto dal server, così da gestirlo correttamente (es. HTML, immagini, CSS...).
+         Le MIME Type permettono al browser di sapere *come interpretare* il contenuto ricevuto. 
+         Se il server restituisce una MIME errata (es: `text/html` invece di `image/png`),
+         il browser potrebbe mostrare errori o non visualizzare correttamente i contenuti.
+      </p>
+    </section>
+
+    <section>
+      <h3>Errore 404</h3>
+      <div>
+      <img src="img/404.jpg" alt="Pagina non trovata">
+      </div>
+      <p>Cliccando sulla pagina <strong>Errori</strong> viene mostrato un errore 404: questo accade quando il client richiede una risorsa inesistente. Il server risponde con “404 Not Found”.</p>
+    </section>
+
+    <section>
+      <h3>Errore: Immagine non trovata</h3>
+      <img src="img/img.jpg" alt="Immagine non trovata">
+      <p>Se una pagina HTML richiede un'immagine che non esiste o non è nella directory corretta, il server carica la pagina ma mostra un errore per quell'immagine.</p>
+    </section>
+   
   </main>
+
 </body>
 </html>
