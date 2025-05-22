@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home</title>
+  <title>Teoria</title>
   <link rel="stylesheet" href="style.css?v=1.0">
 </head>
 
@@ -15,7 +15,7 @@
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html">Teoria</a>
     <a href="server.html">Server</a>
     <a href="errore.html">Gestione Errore</a>
     <a href="non_presente.html">Errori</a>
@@ -34,19 +34,29 @@
       <li>La comunicazione avviene tramite connessione TCP e usa il formato richieste/risposte.</li>
     </ul>
 
-    <p>HTTP è uno standard <strong>stateless</strong>, cioè ogni richiesta è indipendente: il server non mantiene memoria dello stato.</p>
+    <p>
+      HTTP è uno standard <strong>stateless</strong>, cioè ogni richiesta è indipendente: il server non mantiene memoria dello stato.
+      Per aiutare il server a memorizzare alcuni dati del client si untilizzano i <strong>cookie</strong>.
+      I cookie sono piccoli file di testo memorizzati nel browser del client e inviati al server con ogni richiesta.
+      Possono contenere informazioni relative alla sessione dell'utente in un sito web.
+      I messaggi HTTP sono di due tipi RICHIESTA o RISPOSTA e sono composti da un'intestazione (Header) e da un corpo (Body).
+    </p>
 
     <ul>
-      <li>I messaggi HTTP sono di due tipi RICHIESTA o RISPOSTA e sono composti da un'intestazione (Header) e da un corpo (Body).</li>
       <li>L'Header contiene informazioni come metodo, URL, tipo contenuto, ecc.</li>
       <li>Il body è composto dalle informazioni effettive del messaggio</li>
     </ul>
 
-    <p>Le richieste HTTP più comuni sono:</p>
+    <p><strong>Le richieste HTTP più comuni sono:</strong></p>
     <ul>
       <li><code>GET</code> – Ottiene una risorsa.</li>
       <li><code>POST</code> – Invia dati al server.</li>
-      <li><code>PUT</code> – Aggiorna una risorsa esistente.</li>
+      <li><code>PUT</code> – Richiesta di memorizzazione di risorsa.</li>
+      <li><code>DELETE</code> – Elimina una risorsa.</li>
+      <li><code>HEAD</code> – Ottiene solo l'intestazione della risorsa.</li>
+      <li><code>OPTIONS</code> – Richiede informazioni sulle opzioni disponibili per una pagina web.</li>
+      <li><code>CONNECT</code> – Richiede connessione via Proxy.</li>
+      <li><code>TRACE</code> – Richiede di ricevere l'eco del messaggio inviato.</li>
     </ul>
 
     <img src="img/richiesta.jpg" alt="Esempio di richiesta HTTP">

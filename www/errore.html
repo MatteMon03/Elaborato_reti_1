@@ -14,7 +14,7 @@
     <p class="io">Matteo Monari – Matricola: 0001078461 – Email: matteo.monari6@studio.unibo.it</p>  </header>
 
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html">Teoria</a>
     <a href="server.html">Server</a>
     <a href="errore.html">Gestione Errore</a>
     <a href="non_presente.html">Errori</a>
@@ -28,6 +28,31 @@
          Se il server restituisce una MIME errata (es: `text/html` invece di `image/png`),
          il browser potrebbe mostrare errori o non visualizzare correttamente i contenuti.
       </p>
+
+    
+      <h3>Esempio di intestazione HTTP con MIME</h3>
+      <pre>
+        GET /index.html HTTP/1.1
+        Host: localhost:8080
+
+        HTTP/1.1 200 OK 
+        Content-Type: text/html
+        Content-Length: 1024
+      </pre>
+      <p>Nel campo <code>Content-Type: text/html</code>, il server informa il browser che il contenuto è una pagina HTML.</p>
+ 
+      <p class="io">La pagina Errori non esiste quindi porterà all'errore 404</p>
+      <p><strong>Alcuni errori standard:</strong></p>
+      <ul>
+        <li><strong>200 OK:</strong> La richiesta è andata a buon fine, la risorsa viene restituita correttamente.</li>
+        <li><strong>301 Moved Permanently:</strong> La risorsa è stata spostata in modo permanente a un nuovo URL.</li>
+        <li><strong>304 Not Modified:</strong> La risorsa non è stata modificata dal momento dell'ultima richiesta.</li>
+        <li><strong>400 Bad Request:</strong> La richiesta del client non è corretta.</li>
+        <li><strong>401 Unauthorized:</strong> La richiesta richiede autenticazione, ma non è stata fornita.</li>
+        <li><strong>403 Forbidden:</strong> Il server ha capito la richiesta, ma rifiuta l'accesso.</li>
+        <li><strong>500 Internal Server Error:</strong> Errore generico lato server.</li>
+        <li><strong>503 Service Unavailable:</strong> Il server è momentaneamente non disponibile.</li>
+      </ul>
     </section>
 
     <section>
@@ -41,7 +66,7 @@
     <section>
       <h3>Errore: Immagine non trovata</h3>
       <img src="img/img.jpg" alt="Immagine non trovata">
-      <p>Se una pagina HTML richiede un'immagine che non esiste o non è nella directory corretta, il server carica la pagina ma mostra un errore per quell'immagine.</p>
+      <p>Se in una pagina HTML è presente un'immagine che non esiste o non è salvata nella directory corretta, il server carica la pagina web ma non mostra l'immagine.</p>
     </section>
    
   </main>
